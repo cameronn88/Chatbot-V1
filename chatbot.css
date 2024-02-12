@@ -1,0 +1,117 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+  }
+  
+  :root {
+    --hue-neutral:274;
+    --hue-light-purple : 150;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+  }
+
+
+.header-title {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border: 2px solid #000; /* Black border, you can change color and size */
+  margin: 20px;
+  padding: 20px; /* Space between text and border */
+  margin: 20px 0px; /* Space around the box */
+  border-radius: 5px; /* Rounded corners */
+  background-color: white; /* Light grey background, change as needed */
+  text-align: center; /* Center the text */
+  box-shadow: 0 0 10px 2px;
+}
+
+
+
+body {
+  --hue: var(--hue-neutral);
+  display: flex;
+  flex-direction: column; /* Stacks children vertically */
+  align-items: center; /* Horizontally centers children */
+  justify-content: flex-start; /* Aligns children to the start of the container */
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(var(--hue), 100%, 10%);
+  
+  #question {
+    font-size: 32px; /* Adjust the value as needed */
+    text-align: center;
+  }
+  #answer-buttons {
+    font-size: 32px; /* Adjust the value as needed */
+    
+  }
+}
+
+
+
+  body.correct {
+    --hue: var(--hue-correct);
+  }
+  
+  body.wrong {
+    --hue: var(--hue-wrong);
+  }
+  
+  .container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+  }
+  
+  .btn-grid {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 10px;
+    margin: 20px 0;
+    
+  }
+  
+  .btn {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 10px 10px;
+    color: white;
+    outline: none;
+  }
+  
+  .btn:hover {
+    filter: brightness(110%);
+  }
+  
+  .btn.correct {
+    --hue: var(--hue-correct);
+    color: black;
+  }
+  
+  .btn.wrong {
+    --hue: var(--hue-wrong);
+  }
+  
+  .start-btn, .next-btn, .topic-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hide {
+    display: none;
+  }
+
