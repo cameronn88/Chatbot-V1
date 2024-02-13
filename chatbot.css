@@ -5,7 +5,6 @@
   
   :root {
     --hue-neutral:274;
-    --hue-light-purple : 150;
     --hue-wrong: 0;
     --hue-correct: 145;
   }
@@ -37,18 +36,13 @@ body {
   margin: 0;
   width: 100vw;
   height: 100vh;
-  background-color: hsl(var(--hue), 100%, 10%);
-  
+  background-color: hsl(var(--hue), 100%, 20%);
   #question {
-    font-size: 32px; /* Adjust the value as needed */
-    text-align: center;
+    font-size: 32px;
+    text-align: left;
   }
-  #answer-buttons {
-    font-size: 32px; /* Adjust the value as needed */
-    
-  }
+  
 }
-
 
 
   body.correct {
@@ -64,8 +58,19 @@ body {
     max-width: 80%;
     background-color: white;
     border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 0 10px 2px;
+    padding: 28px;
+    box-shadow: 0 0 px 0.5px;
+    #score-container {
+      font-size: 20px; /* Adjust as needed */
+      color: white; /* Choose a color that fits your design */
+      margin-top: 20px; /* Spacing above the score container */
+      padding: 10px; /* Padding inside the container */
+      background-color: hsl(var(--hue-neutral), 100%, 30%); /* Background color */
+      border-radius: 5px; /* Rounded corners */
+      text-align: center; /* Center the text inside */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for depth */
+      display: none; /* Start hidden, will be shown via JavaScript */
+    }
   }
   
   .btn-grid {
@@ -79,11 +84,16 @@ body {
   .btn {
     --hue: var(--hue-neutral);
     border: 1px solid hsl(var(--hue), 100%, 30%);
-    background-color: hsl(var(--hue), 100%, 50%);
+    background-color: hsl(var(--hue), 100%, 20%);
     border-radius: 5px;
     padding: 10px 10px;
     color: white;
     outline: none;
+    #answer-buttons {
+      font-size: 32px;
+      text-align: left;
+
+    }
   }
   
   .btn:hover {
