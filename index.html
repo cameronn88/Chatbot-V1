@@ -11,19 +11,24 @@
 <body>
   <header>
     <br><br><br>
-    <h1 class="header-title">INVESTMENT BANKING QUIZ APP</h1>
   </header>
-  <br><br><br>
+  <br><br><br><br><br>
   <div class="container">
     <div id="topic-buttons-container" class="controls"></div>
     <div id="question-container" class="hide">
       <div id="question">Question</div>
+      <br><br>
       <div id="answer-buttons" class="btn-grid">
         <button class="btn">Answer 1</button>
         <button class="btn">Answer 2</button>
         <button class="btn">Answer 3</button>
         <button class="btn">Answer 4</button>
+        <br><br>
       </div>
+    </div>
+    <!-- Score Display Container -->
+    <div id="score-container" class="hide">
+      Score: <span id="score">0</span> out of <span id="total-questions">0</span>
     </div>
     <div class="controls">
       <button id="start-btn" class="start-btn btn">Start</button>
@@ -35,3 +40,4 @@
   </div>
   <script src="chatbot.js" defer></script>
 </body>
+</html>
